@@ -7,18 +7,23 @@
     <body>
         Ez az index.php
         <?php
-            //lottohúzás
-        $kihuzottak=0;
-        while($kihuzottak<5)
+        function sorsolas[]
         {
-            $sorsoltszam=rand(1,90);
-            if(!isset($tomb[$sorsoltszam]))
+                   $kihuzottak=0;
+            while($kihuzottak<5)
             {
-                $tomb[$sorsoltszam]=1;
-                $kihuzottak++;
+                $sorsoltszam=rand(1,90);
+                if(!isset($tomb[$sorsoltszam]))
+                {
+                    $tomb[$sorsoltszam]=1;
+                    $kihuzottak++;
+                }
             }
+            return $tomb;
+        //var_dump ($tomb);
         }
-        var_dump ($tomb);
+            //lottohúzás
+ 
         echo "Ezek voltak a számok";
            echo "Itt már a php script fut";
         // put your code here
