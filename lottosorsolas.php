@@ -4,6 +4,7 @@ class lottosorsolas {
     var $hanyas;
     var $szamokszama;
     var $oszlopszam;
+    
     //ez hozza létre a sorsolást
     function _construct($hanyas)
     {
@@ -33,9 +34,9 @@ class lottosorsolas {
     }
     
     
-    
-    function lottoszelveny($sorsolt)
+    function lottoszelveny()
     {
+        $sorsolt=$this->sorsolas();
         echo '<table border="1">';
 
         for($i=1; $i<=$this->szamokszama; $i++)
@@ -60,5 +61,6 @@ class lottosorsolas {
                 echo "</tr>\n";
             }
         }
+        echo "</table>";
     }
 }
